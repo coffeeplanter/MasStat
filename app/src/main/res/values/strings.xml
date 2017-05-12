@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MasStat</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="no_sites_recyclerview_label">No sites currently</string>
+    <string name="app_name_nav_header_label">MasStat Android Client</string>
+    <string name="email_nav_header_label">ask@masstat.ru</string>
+    <string name="no_keywords_recyclerview_label">No keywords for this person</string>
+    <string name="no_persons_recyclerview_label">No persons currently</string>
+</resources>
