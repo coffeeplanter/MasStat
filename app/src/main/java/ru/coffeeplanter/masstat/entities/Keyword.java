@@ -1,5 +1,7 @@
 package ru.coffeeplanter.masstat.entities;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import com.plumillonforge.android.chipview.Chip;
 
 /**
@@ -8,18 +10,24 @@ import com.plumillonforge.android.chipview.Chip;
 
 public class Keyword implements Chip {
 
+    @Expose
+    @SerializedName("id")
     private int mId;
+    @Expose
+    @SerializedName("name")
     private String mName;
+    @Expose
+    @SerializedName("person_id")
     private int mPersonId;
-    private int mType = 0;
-
-    public Keyword(String name, int type) {
-        this(name);
-        mType = type;
-    }
 
     public Keyword(String name) {
         mName = name;
+    }
+
+    public Keyword(int id, String name, int personId) {
+        mId = id;
+        mName = name;
+        mPersonId = personId;
     }
 
     public int getId() {
@@ -44,14 +52,6 @@ public class Keyword implements Chip {
 
     public void setPersonId(int personId) {
         mPersonId = personId;
-    }
-
-    public int getType() {
-        return mType;
-    }
-
-    public void setType(int type) {
-        mType = type;
     }
 
     // Method for ChipView functionality.

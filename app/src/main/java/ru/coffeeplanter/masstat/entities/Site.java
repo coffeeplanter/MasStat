@@ -1,5 +1,8 @@
 package ru.coffeeplanter.masstat.entities;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -8,16 +11,21 @@ import java.io.Serializable;
 
 public class Site implements Serializable {
 
+    @Expose
+    @SerializedName("id")
     private int mId;
+    @Expose
+    @SerializedName("name")
     private String mName;
+    @Expose
+    @SerializedName("base_url")
     private String mBaseUrl;
+    @Expose
+    @SerializedName("open_tag")
     private String mOpenTag;
+    @Expose
+    @SerializedName("close_tag")
     private String mCloseTag;
-
-    public Site(String name, String url) {
-        this.mName = name;
-        this.mBaseUrl = url;
-    }
 
     public int getId() {
         return mId;

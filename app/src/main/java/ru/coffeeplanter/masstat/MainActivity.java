@@ -23,6 +23,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,53 +87,6 @@ public class MainActivity extends AppCompatActivity
 //        int id = item.getItemId();
         return super.onOptionsItemSelected(item);
     }
-
-    // This listener is used for correct removing Keywords tab.
-//    private void initPageChangeListener() {
-//        mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//            }
-//            @Override
-//            public void onPageSelected(final int position) {
-//                if ((mTabs.getViewPager().getAdapter().getCount() == 3) && (position < 2)) {
-//                    mTabs.getViewPager().removeOnPageChangeListener(this);
-//                    createTabs(false);
-//                    //noinspection ConstantConditions
-//                    mTabs.getTabLayout().getTabAt(position).select();
-//                    final TabLayout.OnTabSelectedListener tabSelectedListener = new TabLayout.OnTabSelectedListener() {
-//                        @Override
-//                        public void onTabSelected(TabLayout.Tab tab) {
-//                            mTabs.getTabLayout().removeOnTabSelectedListener(this);
-//                            new Handler().postDelayed(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    mTabs.getViewPager().setCurrentItem(position, false);
-//                                }
-//                            }, 10);
-//                        }
-//                        @Override
-//                        public void onTabUnselected(TabLayout.Tab tab) {
-//                        }
-//                        @Override
-//                        public void onTabReselected(TabLayout.Tab tab) {
-//                        }
-//                    };
-//                    mTabs.getTabLayout().addOnTabSelectedListener(tabSelectedListener);
-//                    new Handler().postDelayed(new Runnable(){
-//                        @Override
-//                        public void run(){
-//                            mTabs.getTabLayout().removeOnTabSelectedListener(tabSelectedListener);
-//                        }
-//                    }, 100);
-//                }
-//            }
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        };
-//    }
 
     // Method for creating EasyTabs.
     private void createTabs() {
